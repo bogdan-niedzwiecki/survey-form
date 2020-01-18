@@ -1,0 +1,172 @@
+:root{
+  --color-white: #f3f3f3;
+  --color-darkblue: rgb(110, 110, 160);
+  --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+  --color-green: #37af65;
+  --color-green-alpha: rgba(55, 175, 101, 0.8);
+
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins', Helvetica, sans-serif;
+  color: var(--color-white);
+  background-color: var(--color-darkblue);
+  background-image: url('https://raw.githubusercontent.com/lasjorg/fcc-form-example-image/master/67103817-7c51e200-f18b-11e9-975f-f74561336a9a-lj.jpg');
+  background-blend-mode: soft-light;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  margin: 0;
+}
+ 
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+#main-header {
+  margin: 2rem 0.35rem;
+}
+
+h1{
+  font-weight: 400;
+  margin: 0;
+}
+
+p{
+  font-weight: 200;
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+#description{
+  font-style: italic;
+  text-shadow: 1px 1px 1px black;
+}
+.clue {
+  font-size: 0.875rem;
+}
+#survey-form {
+  background-color: var(--color-darkblue-alpha);
+  border-radius: 0.3rem;
+  padding: 40px;
+  font-size: 1.125rem;
+}
+.row {
+  margin: 0px auto 1rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.column {
+  padding: 0.25rem 0.5rem;
+  flex-basis: 50%;
+  flex-grow: 1;
+}
+
+.left-column{
+  text-align: right;
+}
+
+.right-column{
+  text-align: left;
+}
+#name,
+#email,
+#number,
+select,
+textarea {
+  background-color: var(--color-white);
+  display: block;
+  width: 100%;
+  padding: 0.4rem 0.6rem;
+  border: none;
+  border-radius: 0.35rem;
+  outline: none;
+  font-family: inherit;
+  font-size: 1rem;
+  color: #495057;
+}
+
+textarea {
+  resize: none;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):focus,
+select:focus,
+textarea:focus {
+  box-shadow: 0 0 0 0.2rem var(--color-darkblue);
+}
+
+
+input[type="radio"],
+input[type="checkbox"] {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.625rem;
+}
+
+.label-radio,
+.label-checkbox{
+  display: flex;
+  align-items: center;
+}
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li{
+  margin-bottom: 0.35rem;
+}
+li:last-child {
+ margin-bottom: 0px;
+}
+button{
+  display: block;
+  margin: 0.5rem;
+  width: calc(100% - 1rem);
+  padding: 0.75rem;
+  color: inherit;
+  background: var(--color-green);
+  border: none;
+  border-radius: 0.35rem;
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+}
+button:hover {
+  background: var(--color-green-alpha);
+}
+button:active {
+  background: var(--color-darkblue);
+}
+
+@media (max-width: 720px) {
+ .row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .left-column {
+    text-align: left;
+  }
+}
+
+@media (max-width: 460px) {
+  main {
+    padding: 0;
+  }
+  #survey-form {
+    padding: 0.25rem;
+  }
+}
