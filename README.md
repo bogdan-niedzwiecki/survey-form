@@ -1,4 +1,5 @@
 # Responsive Web Design Projects - Build a Survey Form
+# Objective: Build an app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/VPaoNP.
 
 # User Story #1: I can see a title with id="title" in H1 sized text.
 
